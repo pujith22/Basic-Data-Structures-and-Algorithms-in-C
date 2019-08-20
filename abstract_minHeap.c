@@ -87,7 +87,7 @@ void* getMin(heap *h)
 void decreaseKey(heap *h, int index, int newKey)
 {
     h->arr[index].key = newKey;
-    if(index!=0 && arr[index].key<arr[(index-1)/2])
+    if(index!=0 && h->arr[index].key < h->arr[(index-1)/2].key)
         minHeapifyUp(h,index);
     else
         minHeapifyDown(h,index);

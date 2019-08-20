@@ -16,7 +16,7 @@ void initialize(queue *q)
 	q->head=q->tail=NULL;
 }
 
-void enqueue(queue *q, void* data)
+void enqueue(queue* q, void* data)
 {
 	queue_node* temp = (queue_node*)malloc(sizeof(queue_node));
 	temp->data = data;
@@ -68,11 +68,7 @@ void main()
 	enqueue(&q1,&a);
 	enqueue(&q1,&b);
 	enqueue(&q1,&c);
-	enqueue(&q1,&d);
-	enqueue(&q2,&p);
-	enqueue(&q2,&q);
-	enqueue(&q2,&r);
-	enqueue(&q2,&s);
+	enqueue(&q1,&d);.
 	printQueue(&q1);
 	printf("\n%f",*((float*)dequeue(&q2)));
 	printf("\n%d\n",*((int*)dequeue(&q1)));
